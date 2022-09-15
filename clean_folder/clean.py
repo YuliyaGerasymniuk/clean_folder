@@ -134,6 +134,11 @@ def around_dir():
                 continue
 
 
+def main():
+    get_main_path()
+    around_dir()
+
+
 if __name__ == "__main__":
     main_path = get_main_path()
     around_dir()
