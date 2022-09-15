@@ -1,5 +1,4 @@
-from setuptools import setup
-
+from setuptools import setup, find_namespace_packages
 
 setup(name='clean',
       version='1',
@@ -8,5 +7,7 @@ setup(name='clean',
       author='Yuliya Herasymniuk',
       author_email='juliya.gerasimnjyk@gmail.com',
       license='MIT',
-      packages=["clean_folder"]
+      packages=find_namespace_packages(),
+      install_requires=['markdown'],
+      entry_points={'console_scripts': ['clean-folder=clean_folder.clean:get_main_path']}
       )
